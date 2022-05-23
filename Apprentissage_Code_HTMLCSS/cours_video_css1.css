@@ -1,0 +1,374 @@
+/* Fil rouge: selecteur, dimensions, couleurs */
+/* Texte */
+/* Background */
+/* Boxes */
+/* Positioning */
+/* Flex */
+/* Grid */
+/* Pseudo classe */
+/* Responsive */
+/* Debug */
+
+
+/* ça c est pour la police du text, il faut aller sur google font 
+et choisire une police puis cliquer sur import */
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+
+/* Ici c est pour importer le police de charactere qui  a ete telecharger */
+@font-face{
+    /* on a donner le noms de "font-1" la police de Roboto et on fera 
+    appelle a lui comme ça */
+    font-family: "font-1";
+    src: url(./police_Roboto/Roboto-Black.ttf)
+}
+
+
+/* Grace a cette ligne de code onpeut voir tout les block et donc comprendre *
+* est organiser le site */
+/* *{
+       border: red solid;
+    } */
+
+/* Tout les charactere du corp de la page auront la police roboto */
+body{
+    font-family: "font-1", serif;
+
+    /* Permet de changer la couleur de l ariere plan */
+    background-color: #3f5a5a;
+
+    /* La proprieté "background permet de tout faire sur l ariere plan *
+    * Il suffit d inspecter la page et de cliquer sur le ptit triangle *
+    * du background */
+    background: #3f5a5a;
+
+    /* Pour mettre un image en ariere plan, la proprieté "fixed" permet *
+    * de fixer l image et elle ne bougera pas lorsque je vais bouger le site *
+    * le "center/cover" va centrer l image */
+    background: url(./bg.jpg) fixed center/cover;
+    
+    /* Pour la taille de l ariere plan, la elle prend 100% de l ecran *
+    * grace a "vh" pour "virtual height", on peut aussi la mettre en px ou en pourcentage*/
+    height: 100vh;
+
+}
+
+h1{
+    /* permet de mettre tout les mots en Majuscules */
+    text-transform: uppercase;
+
+    /* pour aggrandire les espaces entre les textes */
+    letter-spacing: 2px;
+
+    /* Pour la taille de la police */
+    font-size: 2.5rem;
+
+    /* Pour mettre la couleur sur le text */
+    color: rgb(0, 0, 139);
+
+    /* pour mettre un ambre sur le text */
+    text-shadow: 5px 1px 3px #3f5a5a;
+
+    /* Pour la position du text (haut, bas, centre, droite, gauch) */
+    text-align: center;
+
+    /* ça c est pour la police du text, il faut aller sur google font 
+    et choisire une police puis cliquer sur import */
+    /* Si la police "Mohave" ne passe pas alors ce sera "sans-serif" */
+    font-family: 'Mohave', sans-serif;
+}
+
+main {
+    /* Ici c est seulement l'ariere plans du texte qui a changer de 
+    couleur */
+    background: whitesmoke;
+
+    /* Pour la largeur, ici la largeur est faite a 100%, on peut aussi *
+    * On peut aussi la mettre en pixel et en pourcentagde "%", ici on *
+    * l a mise en "vw" pour pour "virtual weight" */
+    width: 50vw ;
+
+    /* Pour la hauteur minim */
+    min-height: 60px;
+
+    /* La margin c est ce qu il y a autour de la boite */
+
+    /* Pour la marge en haut et en bas, et a gauche et a dreoit */
+    margin: 70px 20px;
+
+    /* Pour la marge en haut, droite, bas et gauche */
+    margin: 70px 20px 30px 20;
+
+    /* Ou encore on peut faire comme ça */
+    margin-top: 70px;
+    margin-left: 40px;
+
+    /* Ou encore pour dire que en haut et en bas on *
+    * ne veut pas de marge, mais a droite et a gauche *
+    * on veut une marge automatique, auto pour dire qu *
+    * il donne la meme valeur a droite et a gauche */
+    margin: 0 auto;
+
+    /* Le Padding c est ce qu il y a dans la boite, come une marge interieur */
+
+    /* Pour le padding, en haut/bas et a droite/gauch */
+    padding: 10px 40px;
+
+    /* Pour le padding, en haut/bas/droite/gauch */
+    padding: 10px;
+
+    /* Pour arrondire les bordes des boites */
+    border-radius : 10px;
+
+    /* Pour l'ombre de la boite */
+    box-shadow: 9px 11px 0 #f2a5003f;
+ 
+}
+
+
+/***************************** Positioning *****************************/
+
+/* Ainsi on va pouvoir donner a trois classe les memes propriété */
+.positioning,
+.flexbox,
+.Grid{
+    /* Pour faire tout la bordure du truc "positioning", la largeur *
+    * est de "2px", elle est "solid" et de couleur "skyblue" */
+    border: 2px solid skyblue;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.positioning{
+    /* Avec la position relative les objets sont coincé dans le box, *
+    * maintenant le cercle sera coincer dedans */
+    position: relative;
+}
+
+h2{
+    /* Les titres ont des marges automatique et autres truc de ce genres *
+    * du coup avec ce ligne de code leurs marges automatique est de 0*/
+    margin: 0;
+}
+
+/* Pour selectionner tout les elemennts du site, absolument tout */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#cercle{
+    height: 60px;
+    width: 60px;
+    background: skyblue;
+    padding: 20px;
+    border-radius: 50%;
+
+    /* En lui donnant une position absolu le cercle prend completement *
+    * la forme d un cercle, il est libre d evoluer dans sont parent et *
+    * on peut maintenant la mettre ou on veut */
+    position: absolute;
+
+    /* Le cercle sera coler tout en haut du site (mais a cause du *
+    * positionnement absolute cest en haut de la boite) */
+    top: 0;
+
+    /* Le cercle sera coler tout a droite du site (mais a cause du *
+    * positionnement absolute cest a droite de la boite) */
+    right: 0;
+
+    box-shadow: -8px -5px 0px 0px black;
+}
+
+#rectangle{
+    height: 15px;
+    width: 100px;
+    background: slateblue;
+    padding: 20px;
+    position: absolute;
+
+    /* Pour lui dire qu il est a 10px au dessus du bord */
+    bottom: 10px;
+
+    /* Pour bien centrer le rectangle dans la boite de haut en bas * 
+    * de droite a gauche (170, 171, 172)*/
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    /* Si la marge ou bien le padding d une boite passe sur une autre *
+    * boite on peut corriger ça en donnant une z-index moindre */
+    z-index: 0;
+}
+
+
+/****************************** Flexbox ******************************/
+
+ul{
+    /* Cette propriete prend les elementss et les mets a la lignes */
+    display: flex;
+
+    /* Pour repartire chacun des elements de la liste par boite
+    * et s'organise chacun dans l espace */
+    justify-content: space-around;
+
+    /*Il y a un padding automatique sur les liste que l on vient d enlever */
+    padding: 0;
+}
+
+li{
+    /* Pour enlever le style, les boules des listes */
+    list-style-type: none;
+
+    font-size: 0.7rem;
+    height: 160px;
+    width: 160px;
+    background: gray ;
+
+    /* Pour centrer les elementts on utilise les code de la ligne 209, 211 et 213 */
+    /* Pour aligner les elements */
+    display: flex;
+    /* Pour centrer les textes de la liste verticalement */
+    align-items: center;
+    /*Pour centrer les textes de la liste horizontallement */
+    justify-content: center;
+}
+
+
+/****************************** Grid ******************************/
+/*Ici on va faire la structure duu Grid*/
+.grid-container{
+    /* Ici on veut mettre les logo d un coté et le formulaire de l autre *
+    * Pour ça on va utiliser la proprieté "grid" ainsi elle va cree des blocks *
+    * biens imbriquer (comme dans elemento (la ligne 224 et 229 vont bien enssemble) */
+    display: grid;
+
+    /* Dans notre HTML, notre "div" avec la class "grid-container" a 2 enfant,*
+    * l'image et le formulaire, Ici on a fait que le logo prend 30% de l espace *
+    * et le formulaire 70% de l espace */
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+}
+
+/* Pour mettre l image au centre */
+.img{
+    text-align: center;
+}
+
+form{
+    /* La propriete "grid" permet de bien ordonner le formulaire dans des blocks */
+    display: grid; 
+    
+    /* On va faire en sort que prenom et nom soit cote a cote et que en dessous il *
+    * y a le zone de text puis le boutons  */
+
+    /* pour dire que l on veut deux colones qui sont egaux *
+    * Pour dire une fraction, 1 fraction */
+    grid-template-columns: 1fr 1fr;
+
+    /* C est pour les lignes, on va donc dire qu on veut 3 lignes */
+    /* 1er ligne avec prenom nom, deuxieme avec "textearea" et 3em avec "valider" */
+    grid-template-rows: 1fr 1fr 1fr ;
+
+    /* Maintenant on va dessiner a quoi va ressembler les espaces a quoi doit ressembleer les grilles */
+    grid-template-areas: 
+        "i1 i2"
+        "ta ta"
+        "bt bt";
+}
+
+input,textarea{
+    margin: 5px;
+    height: 45px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: "font-1";
+}
+
+#firstname{
+    grid-area: i1;
+}
+#surname{
+    grid-area: i2;
+}
+textarea{
+    grid-area: ta;
+
+    /* Pour que l utilisateur ne puisse pas changer la forme de l espace de text */
+    resize: none;
+}
+/* C est comme ça qu on peut selectionner les selecteurs de type "submit" */
+input[type="submit"] {
+    grid-area: bt;
+
+    /* Pour monntrer que le truc est cliquable et que chaque fois que la souris 
+    * passe sur le bouton "valider" elle devient un ptit main */
+    cursor: pointer;
+    background: cyan;
+
+    /* C est pour chaque transition, changement qui doit etre fait, comme par exemple le survole de la souris */
+    transition: 0.4s;
+}
+
+/* C est pour le survol, quand on va survoler le boutton valider c est ça va faire une effet */
+input[type="submit"]:hover{
+    background: darkblue;
+    color: white;
+}
+
+
+/****************************** Responsive ******************************/
+/* Cette ligne de code veut dire : *
+* Tant que ta largeur minimum ne depasse pas 1000px, tu fera ça, *
+* aprées si c est plus grand que 1000px ça ne fonctionne plus */
+@media screen and (max-width: 1000px){
+    /* On va faire en sort que dées que la largeur sera en dessous de 1000px *
+    * le logo passera au dessus du formulaire */
+    .grid-container{
+        display: block;
+    }
+}
+
+/* Tant que ta largeur minimum ne depasse pas 780px, tu fera ça, */
+@media screen and (max-width: 780px){
+    form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "i1"
+            "i2"
+            "ta"
+            "bt";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cours CSS</title>
+    <link rel="stylesheet" href="cours_video_css1.css">
+</head>
+
+<body>
+    <header>
+        <h1>Les Bases de CSS</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Saepe odio, eius dignissimos
+        excepturi asperiores amet ab esse odit quasi,
+        inventore ipsa provident, recusandae voluptates
+        laborum quam suscipit. Consequatur repudiandae
+        dolores perferendis est illo repellat explicabo,
+        expedita itaque id temporibus ratione.
+    </p>
+    <br>
+    <br>
+    <H2>Deuxiemes parties : Les Boites</H2>
+    <br>
+    <!--Dans cette balise je vais fouré un peut de tout-->
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Dolore in animi earum
+            quo labore ut?
+        </p>
+    </main>
+    <br>
+    <br>
+    <H2>Troisiemes parties : Le positionnement</H2>
+    <main>
+        <div class="positioning">
+            <H2>Le positionnement</H2>
+            <span>relative</span>
+            <span id="cercle">relative</span>
+            <span id="rectangle">relative</span>
+        </div>
+        <!--On va maintenant faire les "flexbox"-->
+        <div class="flexbox">
+            <h2>Flexbox</h2>
+
+            <ul>
+                <li>
+                    <a href="https://flexbox.help/">Flexbox help</a>
+                </li>
+                <li>
+                    <a href="https://www.reveillere.fr/M2WEB/sheets/css.pdf">reveillere</a>
+                </li>
+                <li>
+                    <a href="https://cssgenerator.org/">css generateur</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--On va maintenant faire les "GRID"-->
+        <!-- Ce qu on veut c est organiser la structure de la page avec le logo d un coté 
+             Et le CSS de l autre, et pour ça on va utiliser le CSS-->
+        <div class="Grid">
+            <h2>Grid</h2>
+            <div class="grid-container">
+                <!--Le logo-->
+                <div class="img">
+                    <img src="./pap.png" height="200" alt="logo">
+                </div>
+
+                <!--On fait un formulaire-->
+                <form>
+                    <!--Pour ecrire notre prenom-->
+                    <input type="text" id="firstname" placeholder="Prenom">
+                    <!--Pour ecrire notre noms-->
+                    <input type="text" id="surname" placeholder="Nom">
+                    <!--Pour ecrire un text-->
+                    <textarea cols="30" rows="10" placeholder="The king of the WORLD"></textarea>
+                    <!--Pour le boutton valider-->
+                    <input type="submit" value="valider">
+                </form>
+
+            </div>
+        </div>
+    </main>
+    <br>
+
+</body>
+
+</html>

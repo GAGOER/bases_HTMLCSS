@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!--Le titre de la page-->
+    <title>Cours HTML</title>
+
+    <!--Icone de l'onglet-->
+    <link rel="shortcut icon" href="Grifith.jpg">
+
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>Titre H1</h1>
+            <p>Text basique <br>
+                <em>text en italique</em> <br>
+                <strong> et un text en gras </strong> <br>
+                <span>Ne revient pas a la ligne</span> <br>
+            </p>
+            <!--du lorem ipsum-->
+            <!-- <br> permet de faire des retour a la lignes-->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> <br>
+
+            <div>
+                <!--Pour mettre une image-->
+                <img src="grifith-sur-trone.jpg" height="400" width="200" alt="grifith_sur_trone.jpg">
+            </div>
+
+            <div>
+                <!--Pour faire des listes-->
+                <h3>Listes </h3>
+                <ul>
+                    <li>UL = Unordered List</li>
+                    <li>UL = Unordered List</li>
+                    <li>UL = Unordered List</li>
+                </ul>
+                <ol>
+                    <li>OL = Ordered List</li>
+                    <li>OL = Ordered List</li>
+                    <li>OL = Ordered List</li>
+                </ol>
+            </div>
+
+            <div>
+                <h4>Tableau</h4>
+
+                <!--Pour faire un tableau-->
+                <table border="1" width=50%>
+
+                    <!--Legende-->
+                    <caption> Meilleur manga</caption>
+
+                    <!--En-tete du tableau-->
+                    <thead>
+                        <tr>
+                            <th>One Piece</th>
+                            <th>Hunter x Hunter</th>
+                        </tr>
+                    </thead>
+                    <!--Corps du tableau-->
+                    <tbody>
+                        <tr>
+                            <td>Dragon Ball</td>
+                            <td>Black Clover</td>
+                        </tr>
+                        <tr>
+                            <td>GTO</td>
+                            <td>One Punch Man</td>
+                        </tr>
+                        <tr>
+                            <td>Full Metal Alchimiste</td>
+                            <td>Attaque des titans</td>
+                        </tr>
+                    </tbody>
+                    <br>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <!--creer des liens vers un autre site sur une autre page-->
+        <a href="https://onepiece.fandom.com/fr/wiki/One_Piece_Encyclop%C3%A9die" target="_blank"> Vers wiki one
+            piece sur une autre page</a><br> <br>
+
+        <!--creer des liens vers un autre site sur la meme page-->
+        <a href="https://onepiece.fandom.com/fr/wiki/One_Piece_Encyclop%C3%A9die"> Vers wiki one
+            piece directement sur cette page </a>
+
+
+    </div>
+
+    <div>
+        <!--Pour mettre une video, <height> pour la taille, <autoplay> pour que ça joue automatiquement, 
+            <loop> pour que ça recommence a zero lorsque c est fini et <muted> pour le silence-->
+        <video src="CROIRE - Grifith et MARSHALL D TEACH .mp4" height="250" autoplay loop muted></video>
+    </div>
+
+    <section>
+        <h2>Formulaire</h2>
+        <!--Ici on voit comment creer un formulaire-->
+        <form action="/action.php" method="post">
+            <!--Ici Pour ecrire notre nom-->
+            <label for="name">Nom</label>
+            <!--Ici on ne peut ecrire que du text grace au "type"-->
+            <input id="name" type="text" placeholder="Entrez Votre nom"> <br>
+            <!--Ici Pour ecrire notre age-->
+            <label for="age"> Age</label>
+            <!--Ici on ne peut ecrire que du chiffre grace au "type"-->
+            <input id="age" type="number" min="0" max="99" step="1" value="18"><br>
+
+            <!--Input select-->
+            <label for="gender">Genre</label>
+            <select id="gender">
+                <option value="homme">Homme</option>
+                <option selected value="femme">Femme</option>
+            </select><br>
+
+            <!-- Input radio -->
+            <div>
+                <input type="radio" name="type" id="luffy">
+                <label for="luffy"> Luffy</label>
+
+                <input type="radio" name="type" id="guts">
+                <label for="guts"> Guts</label>
+
+                <input type="radio" name="type" id="kaska">
+                <label for="kaska"> Kaska</label>
+            </div>
+
+            <div>
+                <!-- Pour que l utilisateur ecrire un texte -->
+                <textarea cols="30" rows="10" placeholder="Entrez votre demande ici"></textarea> <br>
+            </div>
+
+            <div>
+                <!-- Input Checkbox -->
+                <!-- Pour faire des cases pour cocher-->
+                <label><input type="checkbox" value="luffy"> luffy </label>
+                <label><input type="checkbox"> Zoro </label>
+                <label><input type="checkbox"> Sanji</label>
+
+                <!-- ici on an un bouton qui permet de valider les info du formulaire -->
+                <input type="submit" value="valider"><br>
+            </div>
+        </form>
+    </section>
+</body>
+
+<footer>
+    <!-- Pour mon mail -->
+    <a href="fabian.afiankoe@gmail.com"> Ecrivez moi!</a>
+    <br><br>
+    <!-- pour pouvoir telecharger les fichiers -->
+    <a href="HTLMCSS video YouTube.odt" download="HTLMCSS video YouTube.odt">HTLMCSS video YouTube.odt</a><br>
+
+</footer>
+
+</html>
